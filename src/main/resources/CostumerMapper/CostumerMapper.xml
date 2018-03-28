@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.usst.mapper.CostumerMapper">
+    <select id="ByCount" parameterType="String" resultType="com.usst.pojo.Costumer">
+        select * from bank where countnum=#{0}
+
+    </select>
+
+    <select id="UpdateByCount" >
+        update bank set money=money+#{0} where countnum=#{1}
+    </select>
+
+
+
+</mapper>
